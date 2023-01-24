@@ -29,7 +29,7 @@ const io = require("socket.io")(server, {
 
 const corsOption = {
   credentials: true,
-  origin: process.env.FRONT_URL,
+  origin: "https://devhouse.onrender.com",
 };
 
 app.use(cors(corsOption));
