@@ -37,14 +37,14 @@ class AuthController {
     try {
       if (phone) {
         console.log(phone, otp);
-        // await otpService.sendBySms(phone, otp);
+        await otpService.sendBySms(phone, otp);
         res.json({
           hash: `${hash}.${expires}`, //why send expire time bcz to verify the the expire time during verification of otp
           phone,
         });
       } else {
         console.log(otp);
-        // await mailService.sendMail(email, otp);
+        await mailService.sendMail(email, otp);
         res.json({
           hash: `${hash}.${expires}`,
           email,
